@@ -4,8 +4,13 @@
         <title>Hello!</title>
         <script>
         	function hello() {
-                document.querySelector('h1').innerHTML = 'Goodbye!'; //the use of document.querySelector look through an html and extract an element of that page to manipulate 
-        }
+                const heading = document.querySelector('h1');
+                if (heading.innerHTML === 'Hello!') {
+                    heading.innerHTML = 'Goodbye!';
+                } else {
+                    heading.innerHTML = 'Hello!';
+                }
+            }
         </script>
     </head>
     <body>
