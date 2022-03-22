@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Counter</title>
-        <script> // 
+        <title>Count</title>
+        <script>
             let counter = 0;
-            function count(){
-                counter+=1; // increasing Counter by 1 you can also use counter++;
-                alert(counter); 
+            function count() {
+                counter++;
+                document.querySelector('h1').innerHTML = counter;
             }
-// button with name Count has been done
-            
         </script>
     </head>
     <body>
-        <h1> Hello!</h1>
-        <button onclick="count()"> Count </button>
+        <h1>0</h1>
+        <button onclick="count()">Count</button>
     </body>
 </html>
