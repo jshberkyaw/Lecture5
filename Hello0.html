@@ -3,18 +3,19 @@
     <head>
         <title>Hello!</title>
         <script>
-       	function hello() {
-                const heading = document.querySelector('h1'); //the use of const is to describe the variable as constant or you can use 'let' function  describe the variable without it being a constant.
-                if (heading.innerHTML === 'Hello!') {
-                    heading.innerHTML = 'Goodbye!';
-                } else {
-                    heading.innerHTML = 'Hello!';
-                }
-            }
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').onsubmit = function() {
+                    const name = document.querySelector('#name').value;
+                    alert(`Hello, ${name}!`);
+                };
+            });
         </script>
     </head>
-    <body>
+    <body> 
         <h1>Hello!</h1>
-        <button onclick="hello()"> Click Here </button>
+        <form>
+            <input autofocus id="name" placeholder="Name" type="text">
+            <input type="submit">
+        </form>
     </body>
 </html>
