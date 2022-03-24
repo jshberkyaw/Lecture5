@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
 
                 // Have each button change the color of the heading
-                document.querySelectorAll('.color-change').forEach(function(button) {
-                    button.onclick = function() {
+                document.querySelectorAll('.color-change').forEach(button => {
+                    button.onclick = () => {
                         document.querySelector('#hello').style.color = button.dataset.color;
                     };
                 });
